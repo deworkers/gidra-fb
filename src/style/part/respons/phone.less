@@ -1,0 +1,35 @@
+@import "../sprite.less";
+@import "../mixin.less";
+@import "../base.less";
+
+
+@media screen and (max-width: 760px) { // планшет горизонтально
+    .promo {
+        padding: 0 10px;
+    }
+    .promo-title {
+        font-size: 20px;
+    }
+
+    .promo-logo {
+        img {
+            width: 143px;
+        }
+    }
+
+    .promo-since__date {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .promo-since__year {
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 480px) { // телефон
+    .promo-title {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,619 @@
+@import "sprite.less";
+@import "mixin.less";
+@import "base.less";
+
+body {
+    
+}
+
+.promo {
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.promo-logo {
+}
+
+.promo-title {
+    font-family: @font-title;
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.promo-since {
+    
+}
+
+.promo-since__date {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.promo-since__year {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.reset {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
+.head {
+    padding-top: 30px;
+    padding-left: 140px;
+}
+
+.head-logo {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.head-logo__img {
+    position: absolute;
+    top: -60px;
+    left: -90px;
+}
+
+.head-logo__title {
+    font-family: @font-title;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.head__year {
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.head-menu {
+    display: table;
+    margin-bottom: 70px;
+    a {
+        display: inline-block;
+        padding: 25px 10px;
+        text-align: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        border-right: 1px solid #4a4f5e;
+        background: #1d2336;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
+
+.tabs {
+}
+
+.tab-list {
+    text-align: center;
+    font-family: @font-title;
+}
+
+.tab-select {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 40px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+
+    &.active {
+        border-color: #fff;
+    }
+}
+
+.tab-one {
+}
+
+.match-list {
+    overflow: hidden;
+    background: url(../img/slider-bg.png);
+    border-bottom: 1px solid #f47c20;
+}
+
+.match-one {
+    padding: 30px 20px 30px;
+    height: 190px;
+    text-align: center;
+    color: #fff;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.match-list {
+    .swiper-slide-active {
+        .match-one {
+            border-left: none;
+        }
+    }
+}
+
+.match-one__date {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.match-one__comand {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.match-one__vs {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f47c20;
+}
+
+.swiper-button-next {
+    
+}
+
+.swiper-button-prev {
+    
+}
+
+
+
+.side {
+    width: 250px;
+    float: right;
+    padding-top: 80px;
+}
+
+.side-content {
+    margin-right: 280px;
+    padding-top: 80px;
+}
+
+.table-one {
+    background: #fff;
+    margin-bottom: 50px;
+}
+
+.block-top {
+    background: #fff;
+    padding: 20px 20px;
+    height: 56px;
+}
+
+.block-top__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: @color_blue;
+    padding: 25px 20px;
+    font-size: 24px;
+    color: #fff;
+    font-family: @font-title;
+}
+
+.block-top__subtitle {
+    text-align: right;
+    font-size: 14px;
+    color: #737373;
+
+    span {
+        color: #000;
+    }
+
+    a {
+        text-decoration: none;
+        color: #737373;
+    }
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+        font-size: 14px;
+        color: #737373;
+        padding: 12px 12px;
+        border: 1px solid #cdcdcd;
+        background: #e8e9eb;
+        text-align: center;
+        font-weight: 400;
+
+        &:nth-child(1) {
+            border-right: none;
+        }
+
+        &:nth-child(2) {
+            text-align: left;
+            border-left: none;
+        }
+    }
+
+    td {
+        padding: 5px 4px;
+        border: 1px solid #cdcdcd;
+        color: #737373;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        &:nth-child(1) {
+            border-right: none;
+        }
+
+        &:nth-child(2) {
+            text-align: left;
+            border-left: none;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    tr {
+        &:hover {
+            td {
+                background: @color_blue;
+                color: #fff;
+
+                a {
+                    color: #fff;
+                }
+            }
+
+            .stub {
+                background: url(../img/cap-h.jpg) no-repeat;
+            } 
+        }
+    }
+
+    .score {
+        font-weight: 700;
+        color: #000;
+    }
+}
+
+.stub {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/cap.jpg) no-repeat;
+    position: relative;
+    top: 2px;
+
+}
+
+.table-bottom {
+    padding: 20px 30px;
+}
+
+
+.best-player {
+    display: table-cell;
+    padding-right: 60px;
+}
+
+.best-player__position {
+    color: #737373;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.best-player__name {
+    color: @color_blue;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.table--playoff {
+    th {
+        text-align: left;
+        padding-left: 30px;
+    }
+}
+
+
+.playoff {
+    height: 390px;
+}
+
+.playoff-one {
+    width: 220px;
+    display: table;
+    border-collapse: collapse;
+}
+
+.playoff-team {
+    display: table-row;
+    height: 40px;
+    width: 100%;
+}
+
+
+.playoff__title {
+    display: table-cell;
+    width: 180px;
+    vertical-align: middle;
+    padding: 0 10px;
+    border: 1px solid #cdcdcd;
+    font-size: 14px;
+    background: #fff;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.playoff__score {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+    border: 1px solid #cdcdcd;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    background: #fff;
+}
+
+.playoff-team--winner {
+    .playoff__title {
+        background: @color_blue;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .playoff__score {
+        background: @color_blue;
+        color: #fff;
+    }
+}
+
+.playoff-one__title {
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #737373;
+    margin-bottom: 5px;
+}
+
+#playoff-1 {
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 120px;
+        top: 50%;
+        left: 100%;
+        border-right: 1px solid #cdcdcd;
+        border-top: 1px solid #cdcdcd;
+    }
+}
+
+#playoff-2 {
+    position: absolute;
+    left: 30px;
+    top: 270px;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 120px;
+        bottom: 50%;
+        left: 100%;
+        border-right: 1px solid #cdcdcd;
+        border-bottom: 1px solid #cdcdcd;
+    }
+}
+
+#playoff-3 {
+    position: absolute;
+    left: 70px;
+    top: 140px;
+}
+
+#final {
+    position: absolute;
+    left: 370px;
+    top: 158px;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 1px;
+        background: #cdcdcd;
+        top: 50%;
+        right: 100%;
+    }
+}
+
+.side-photo {
+    margin-bottom: 50px;
+}
+
+.side-poll {
+    height: 366px;
+    background-image: url(../tmp/poll-bg.jpg);
+    margin-bottom: 50px;
+    padding: 30px 20px;
+
+    button {
+        display: block;
+        font-size: 14px;
+        height: 40px;
+        width: 160px;
+        margin: 20px auto;
+        border: none;
+        outline: none;
+        background: #f6591c;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: @font-title;
+        border-radius: 3px;
+    }
+}
+
+.side-poll__title {
+    text-align: center;
+    font-family: @font-title;
+    line-height: 30px;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.select {
+
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #fff;
+        border-radius: 3px;
+        height: 40px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+}
+
+.select-list {
+    position: absolute;
+    background: #fff;
+    border-radius: 3px;
+    width: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3)
+}
+
+.select-list__one {
+    display: block;
+    font-size: 13px;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background: #e8e9eb;
+    }
+}
+
+.side-news {
+    background: #fff;
+}
+
+.side-news-one {
+    font-family: @font-title;
+    padding: 15px 20px;
+}
+
+.side-news-one__date {
+    font-size: 12px;
+    color: #737373;
+}
+
+.side-news-one__title {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.side-news-list {
+    padding: 20px 0;
+}
+
+
+.footer {
+    color: #fff;
+    padding: 50px 0 50px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/fon-footer.jpg);
+        background-size: cover;
+        background-position: 50% 100%;
+        z-index: -1;
+    }
+}
+
+.footer-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.footer-year {
+    font-size: 52px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 150px;
+}
+
+.footer-menu {
+    text-align: center;
+    margin-bottom: 90px;
+    a {
+        display: inline-block;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+
+        &.current {
+            border-bottom: 4px solid @color_blue;
+        }
+    }
+}
+
+.footer-bottom {
+}
+
+.footer-copy {
+    font-size: 12px;
+    font-family: @font-title;
+    color: #cacaca;
+}
+
+.footer-link {
+    color: #fff;
+    font-size: 12px;
+    font-family: @font-title;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
