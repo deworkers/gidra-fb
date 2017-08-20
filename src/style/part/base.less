@@ -5,12 +5,12 @@
 
 
 //переменные
-@font: 'Arial', sans-serif;
+@font: 'CorpidOT', serif;
 @font-title: 'CorpidOT', serif;
 @font-alt: 'Trebuchet MS', serif;
 
 @color_white: #fff;
-@color_text: #000000;
+@color_text: #fff;
 @color_link: #005cc8;
 @color_blue: #005cc8;
 @color_grey: #737373;
@@ -62,9 +62,10 @@ img {
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 0 20px 0;
     line-height: 26px;
+    color: #fff;
 }
 
 a {
@@ -95,19 +96,20 @@ h1 {
 }
 
 h2 {
-    .head(22px, 25px, normal, @color_text);
+    .head(30px, 30px, normal, @color_text);
+    text-transform: uppercase;
 }
 
 h3 {
-    .head(18px, 20px, normal, @color_text);
+    .head(24px, 25px, normal, @color_text);
 }
 
 h4 {
-    .head(16px, 15px, normal, @color_text);
+    .head(18px, 20px, normal, @color_text);
 }
 
 h5 {
-    .head(13px, 15px, normal, @color_text);
+    .head(16px, 20px, normal, @color_text);
     font-weight: 700;
 }
 
@@ -124,9 +126,124 @@ ul, ol{
     margin:0 0 25px 0px; 
     padding: 0 0 0 30px;
 }
-ul li, ol li{
-    font-size: 14px;
-    margin-bottom:5px;
+
+
+ol {
+    counter-reset: list1;
+    padding-left: 40px;
+
+    li{
+        list-style: none;
+        font-size: 24px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &:before {
+            font-family: "Arial";
+            font-weight: 700;
+            counter-increment: list1;
+            content:counter(list1)'.';
+            position: absolute;
+            top: 0;
+            left: -40px;
+        }
+
+        ol {
+            counter-reset: list2;
+            margin: 20px 0;
+            padding: 0;
+
+            li {
+                font-size: 16px;
+                margin-bottom: 20px;
+                &:before {
+                    font-family: "Arial";
+                    counter-increment: list2;
+                    content:counter(list1) "." counter(list2) ".";
+                    font-weight: 400;
+                }
+                ol {
+
+                    counter-reset: list3;
+                    padding-left: 50px;
+                    li {
+                        font-size: 15px;
+                        &:before {
+                            font-family: "Arial";
+                            counter-increment: list3;
+                            content:counter(list1) "." counter(list2) "."counter(list3) ". ";
+                            font-weight: 400;
+                            left: -50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+blockquote {
+    background: @color_blue;
+    color: #fff;
+    padding: 20px 30px;
+    margin-left: -30px;
+    margin-bottom: 30px;
+}
+
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    ul {
+        margin: 25px 0;
+    }
+    ul  li {
+        list-style-type: none;
+        font-size: 15px;
+        &:before {
+            content: "—";
+            position: absolute;
+            top: 0;
+            left: -30px;
+        }
+    }
+}
+
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Arial";
+
+    th {
+        background: @color_blue;
+        color: #fff;
+        text-align: left;
+        padding: 15px 20px;
+        font-weight: 400;
+        border-right: 1px solid #2973c9;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    td {
+        padding: 15px 20px;
+        color: #000;
+        background: #fff;
+        border-bottom: 1px solid  #cdcdcd;
+        border-right: 1px solid  #cdcdcd;
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    tr {
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 }
 
 .clearfix {
