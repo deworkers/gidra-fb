@@ -101,10 +101,10 @@ $(document).ready(function() {
         }
     });
 
-    menuLength = $('.head-menu a').length;
+   /* menuLength = $('.head-menu a').length;
     if ( menuLength <= 5 ) {
         menuWidth = 960 / menuLength;
         $('.head-menu a').css('width', menuWidth+'px')
-    }
+    }*/
 
 });

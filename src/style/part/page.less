@@ -196,6 +196,10 @@ body {
 .side-content {
     margin-right: 280px;
     padding-top: 80px;
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 .table-one {
@@ -274,6 +278,7 @@ body {
         background: #fff;
         &:nth-child(1) {
             border-right: none;
+            width: 30px;
         }
 
         &:nth-child(2) {
@@ -362,27 +367,36 @@ body {
     height: 390px;
 }
 
+.playoff--56 {
+    height: 155px;
+}
+
 .playoff-one {
-    width: 220px;
+    width: 280px;
     display: table;
-    border-collapse: collapse;
 }
 
 .playoff-team {
-    display: table-row;
+    display: table;
     height: 40px;
     width: 100%;
+    border-top: 1px solid #cdcdcd;
+    &:last-child {
+        border-bottom: 1px solid #cdcdcd;
+    }
 }
 
 
 .playoff__title {
     display: table-cell;
-    width: 180px;
+    width: 240px;
     vertical-align: middle;
     padding: 0 10px;
-    border: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
     font-size: 14px;
     background: #fff;
+    color: #000;
 
     a {
         text-decoration: none;
@@ -394,7 +408,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     padding: 0 10px;
-    border: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
     font-size: 14px;
     font-weight: 700;
     text-align: center;
@@ -433,13 +447,19 @@ body {
     &:before {
         content: "";
         position: absolute;
-        width: 80px;
+        width: 40px;
         height: 120px;
         top: 50%;
         left: 100%;
         border-right: 1px solid #cdcdcd;
         border-top: 1px solid #cdcdcd;
     }
+}
+
+#playoff-5 {
+    position: absolute;
+    left: 30px;
+    top: 35px;
 }
 
 #playoff-2 {
@@ -449,9 +469,9 @@ body {
     &:before {
         content: "";
         position: absolute;
-        width: 80px;
-        height: 120px;
-        bottom: 50%;
+        width: 40px;
+        height: 122px;
+        bottom: 49%;
         left: 100%;
         border-right: 1px solid #cdcdcd;
         border-bottom: 1px solid #cdcdcd;
@@ -460,7 +480,7 @@ body {
 
 #playoff-3 {
     position: absolute;
-    left: 70px;
+    left: 50px;
     top: 142px;
 }
 
@@ -471,7 +491,7 @@ body {
     &:before {
         content: "";
         position: absolute;
-        width: 80px;
+        width: 20px;
         height: 1px;
         background: #cdcdcd;
         top: 50%;
@@ -674,7 +694,7 @@ body {
 }
 
 .title {
-    font-size: 50px;
+    font-size: 40px;
     color: #fff;
 }
 
@@ -713,7 +733,6 @@ body {
 
 .title {
     margin-bottom: 0;
-    max-width: 650px;
 }
 
 .news-one__date {
