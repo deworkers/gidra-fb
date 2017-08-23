@@ -84,4 +84,27 @@ $(document).ready(function() {
         fixedContentPos: false
     });
 
+    $('.player__position').each(function() {
+        text = $(this).text();
+        $(this).text(text.replace(/(?:&nbsp;|<br>)/g,''))
+    });
+
+    $('.video__img').on('click', function() {
+        id = $(this).find('video').attr('id');
+        video = document.getElementById(id);
+        if (video.paused) {
+            video.play();
+            $(this).addClass('played');
+        } else {
+            video.pause();
+            $(this).removeClass('played');
+        }
+    });
+
+    menuLength = $('.head-menu a').length;
+    if ( menuLength <= 5 ) {
+        menuWidth = 960 / menuLength;
+        $('.head-menu a').css('width', menuWidth+'px')
+    }
+
 });
