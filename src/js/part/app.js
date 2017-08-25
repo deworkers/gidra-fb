@@ -38,13 +38,13 @@ $(document).ready(function() {
         }
     });
 
-    setTimeout(function() {
+    /*setTimeout(function() {
         $('.photos').masonry({
             columnWidth: 210,
             itemSelector: '.photo',
             gutter: 25
         });
-    }, 50)
+    }, 50)*/
 
 
     $('.photos').magnificPopup({
@@ -106,5 +106,9 @@ $(document).ready(function() {
         menuWidth = 960 / menuLength;
         $('.head-menu a').css('width', menuWidth+'px')
     }*/
+
+    $('.table-one-hide').on('click', function() {
+        $(this).next().slideToggle();
+    });
 
 });

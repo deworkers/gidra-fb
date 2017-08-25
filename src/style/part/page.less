@@ -197,7 +197,7 @@ body {
     margin-right: 280px;
     padding-top: 80px;
 
-    a {
+    p a {
         text-decoration: underline;
     }
 }
@@ -265,6 +265,7 @@ body {
         &:nth-child(2) {
             text-align: left;
             border-left: none;
+            padding-left: 4px;
         }
     }
 
@@ -321,6 +322,154 @@ body {
         width: 60px;
     }
 }
+
+.table--top {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Arial";
+    th {
+        font-size: 14px;
+        color: #737373;
+        padding: 12px 10px;
+        border: 1px solid #cdcdcd;
+        background: #e8e9eb;
+        text-align: left;
+        font-weight: 400;
+
+        &:nth-child(1) {
+            width: 30px;
+        }
+
+        &:nth-child(2) {
+            width: 240px;
+        }
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    
+
+    
+}
+
+.table--inn {
+    width: 100%;
+
+    td {
+        text-align: left;
+        padding: 12px 10px;
+        border: 1px solid #cdcdcd;
+        color: #737373;
+        font-size: 14px;
+        vertical-align: middle;
+        background: #fff;
+        height: 40px;
+        &:nth-child(1) {
+            text-align: center;
+            width: 62px;
+        }
+    }
+    tr {
+        &:first-child {
+            td {
+                border-top: none;
+            }
+        }
+    }
+    a {
+        color: @color_blue;
+    }
+}
+
+.best-players-box {
+    border-left: none;
+}
+
+.best-players {
+    color: #737373;
+    padding: 10px 30px;
+}
+
+.best-player-table {
+    text-align: left;
+    margin-bottom: 10px;
+    img {
+        width: 50px;
+        margin-right: 10px;
+        float: left;
+    }
+}
+
+td.place-1 {
+    background: #005cc8;
+    color: #fff;
+    font-weight: 700;
+}
+
+td.place-2 {
+    background: #4088dd;
+    color: #fff;
+    font-weight: 700;
+}
+
+td.place-3 {
+    background: #81b9fa;
+    color: #fff;
+    font-weight: 700;
+}
+
+td.place {
+    background: #e8e9eb;
+}
+
+.table-one-hidden {
+    border-top: 2px solid #21273a;
+
+    .hidden {
+        display: none;
+    }
+} 
+
+.table-one-hide {
+    padding: 10px 0;
+    text-align: center;
+    span {
+        color: @color_blue;
+        font-family: "Arial";
+        border-bottom: 2px dashed @color_blue;
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.best-player-table__pos {
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.best-player-table__name {
+    a {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: @color_blue;
+    }
+
+}
+
+.best-player-table__ball {
+    font-size: 11px;
+}
+
+.best-player-table__filial {
+    font-size: 11px;
+}
+
 
 .stub {
     display: inline-block;
@@ -391,7 +540,7 @@ body {
     display: table-cell;
     width: 240px;
     vertical-align: middle;
-    padding: 0 10px;
+    padding: 0 5px;
     border-left: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
     font-size: 14px;
@@ -683,8 +832,10 @@ body {
     color: #fff;
     font-size: 24px;
     display: block;
-    text-transform: uppercase;padding-left: 30px;
+    text-transform: uppercase;
+    padding-left: 30px;
     margin-bottom: 30px;
+    text-decoration: none;
 }
 
 .news-list__text {
@@ -943,11 +1094,19 @@ body {
 
 .photos {
     width: 710px;
+    word-spacing: -0.35em;
 }
 
 .photo {
+    display: inline-block;
     width: 210px;
     margin-bottom: 20px;
+    vertical-align: top;
+    margin-right: 25px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
 
     img {
         width: 210px;
